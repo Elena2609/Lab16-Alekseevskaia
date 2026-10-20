@@ -56,37 +56,59 @@ using System.Drawing;
 // } 
 
 //Шаг 4. Метод, возвращающий массив
-int[] GenerateScheduleSlots(int lessonsCount)
+// int[] GenerateScheduleSlots(int lessonsCount)
+// {
+//     int[] slots = new int[lessonsCount];
+
+//     for (int i = 0; i < lessonsCount; i++)
+//     {
+//         slots[i] = i + 1;
+//     }
+
+//     return slots;
+// }
+
+// int[] slots = GenerateScheduleSlots(6);
+// Console.WriteLine("Массив чисел");
+// foreach (int slot in slots)
+// {
+//     Console.WriteLine(slot);
+// } 
+// int[] GenerateEvenSlots(int lessonsCount)
+// {
+//     int[] slots = new int[lessonsCount];
+//     for (int i = 0; i < lessonsCount; i++)
+//     {
+//         slots[i] = (i + 1) * 2;
+//     }
+
+//     return slots;
+// } 
+// int[] slotsEven = GenerateEvenSlots(6);
+// Console.WriteLine("Массив четных чисел");
+// foreach (int slotE in slotsEven)
+// {
+//     Console.WriteLine(slotE);
+// }
+
+// //Шаг 5. Знакомство с Array.Sort()
+// int[] grades = { 4, 5, 3, 5, 4, 2 };
+// Array.Sort(grades);
+
+// foreach (int grade in grades)
+// {
+//     Console.WriteLine(grade);
+// } 
+
+//Самостоятельные задания
+Console.WriteLine("Задача A");
+int N = int.Parse(Console.ReadLine());
+int[] num = new int[N];
+
+for (int i = 0; i < N; i++)
 {
-    int[] slots = new int[lessonsCount];
-
-    for (int i = 0; i < lessonsCount; i++)
-    {
-        slots[i] = i + 1;
-    }
-
-    return slots;
+    num[i] = (i + 1) * (i + 1);
+} 
+foreach (int n in num){
+    Console.WriteLine(n);
 }
-
-int[] slots = GenerateScheduleSlots(6);
-Console.WriteLine("Массив чисел");
-foreach (int slot in slots)
-{
-    Console.WriteLine(slot);
-} 
-int[] GenerateEvenSlots(int lessonsCount)
-{
-    int[] slots = new int[lessonsCount];
-    for (int i = 0; i < lessonsCount; i++)
-    {
-        slots[i] = (i + 1) * 2;
-    }
-
-    return slots;
-} 
-int[] slotsEven = GenerateEvenSlots(6);
-Console.WriteLine("Массив четных чисел");
-foreach (int slotE in slotsEven)
-{
-    Console.WriteLine(slotE);
-} 
