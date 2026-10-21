@@ -101,14 +101,73 @@ using System.Drawing;
 // } 
 
 //Самостоятельные задания
-Console.WriteLine("Задача A");
-int N = int.Parse(Console.ReadLine());
-int[] num = new int[N];
+// Console.WriteLine("Задача A");
+// int N = int.Parse(Console.ReadLine());
+// int[] num = new int[N];
 
-for (int i = 0; i < N; i++)
-{
-    num[i] = (i + 1) * (i + 1);
+// for (int i = 0; i < N; i++)
+// {
+//     num[i] = (i + 1) * (i + 1);
+// } 
+// foreach (int n in num){
+//     Console.WriteLine(n);
+// } 
+
+// Console.WriteLine("Задача A");
+// int[] numbers = {5, -3, 10, -7, 0, 8, 67};
+
+// for (int i = 0; i < numbers.Length; i++){
+//     if (numbers[i] < 0){
+//         numbers[i] = 0;
+//     }
+// } 
+
+// foreach (int n in numbers){
+//     Console.WriteLine(n);
+// } 
+// Console.Write("Введите свою фамилию: ");
+// string surname = Console.ReadLine()!.Trim();
+// if (string.IsNullOrEmpty(surname)) {
+// Console.WriteLine("Фамилия не введена. Завершение работы.");
+// return;
+// }
+// Random rnd = new(surname.GetHashCode() + DateTime.Now.DayOfYear);
+// var assigned = Enumerable.Range(1, 10)
+// .OrderBy(_ => rnd.Next())
+// .Take(2)
+// .OrderBy(x => x)
+// .ToList();
+// Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
+
+Console.WriteLine("Вариант 1");
+Console.Write("Введите размер массива: ");
+int count = int.Parse(Console.ReadLine());
+int[] numbers = new int[count];
+int sum = 0;
+
+for (int i = 0; i < count; i++){
+    numbers[i] = int.Parse(Console.ReadLine());
+    sum += numbers[i];
 } 
-foreach (int n in num){
-    Console.WriteLine(n);
+Console.WriteLine($"Сумма введеных чисел: {sum}");
+
+Console.WriteLine("Вариант 9");
+int[] MergeArrays(int[] first, int[] second){
+    int[] res = new int[first.Length + second.Length];
+    for (int i = 0; i < first.Length; i++){
+        res[i] = first[i];
+    }
+    for (int i = 0; i < second.Length; i++){
+        res[i+first.Length] = second[i];
+    } 
+    return res;
+} 
+int[] first = {1, 2, 3};
+int[] second = {4, 5, 6};
+int[] result = MergeArrays(first, second);
+foreach (var arr in result)
+{
+    Console.WriteLine(arr);
 }
+
+
